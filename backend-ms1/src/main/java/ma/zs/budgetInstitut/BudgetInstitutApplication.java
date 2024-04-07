@@ -59,7 +59,7 @@ public class BudgetInstitutApplication {
     return (args) -> {
         if(true){
 
-        
+
 		// ModelPermissions For admin
 		List<ModelPermission> modelPermissions = new ArrayList<>();
 		addPermissionForAdmin(modelPermissions);
@@ -68,8 +68,8 @@ public class BudgetInstitutApplication {
 		List<ActionPermission> actionPermissions = new ArrayList<>();
 		addActionPermissionForAdmin(actionPermissions);
 		actionPermissions.forEach(e -> actionPermissionService.create(e));
-				
-        
+
+
 		// User admin
 		User userForAdmin = new User("admin");
 		userForAdmin.setPassword("123");
@@ -154,6 +154,19 @@ public class BudgetInstitutApplication {
         actionPermissions.add(new ActionPermission("duplicate"));
     }
 
+
+    private static void addPermissionForEmploye(List<ModelPermission> modelPermissions) {
+        modelPermissions.add(new ModelPermission("ExpressionBesoinDetail"));
+        modelPermissions.add(new ModelPermission("Produit"));
+        modelPermissions.add(new ModelPermission("Responsabilite"));
+        modelPermissions.add(new ModelPermission("BudgetEntiteAdmin"));
+        modelPermissions.add(new ModelPermission("EntiteAdmin"));
+        modelPermissions.add(new ModelPermission("Employe"));
+        modelPermissions.add(new ModelPermission("CategorieProduit"));
+        modelPermissions.add(new ModelPermission("ExpressionBesoin"));
+        modelPermissions.add(new ModelPermission("ModelPermission"));
+        modelPermissions.add(new ModelPermission("ActionPermission"));
+    }
 
 }
 
