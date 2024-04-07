@@ -30,6 +30,7 @@ import ma.zs.budgetInstitut.zynerator.security.bean.Role;
 @SpringBootApplication
 //@EnableFeignClients
 public class BudgetInstitutApplication {
+
     public static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) {
